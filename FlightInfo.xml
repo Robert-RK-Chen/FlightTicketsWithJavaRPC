@@ -1,67 +1,68 @@
 <?xml version="1.0" encoding="gb2312"?>
 <flights>
-    <fligh ID="CA907" departure="北京" destination="马德里">
+    <flight ID="CA907" departure="北京" destination="马德里">
         <type>787</type>
         <takeOffExpected>00:55</takeOffExpected>
         <takeOffActual/>
         <arriveAtExpected>06:45</arriveAtExpected>
         <arriveAtActual/>
         <state>取消</state>
-    </fligh>
-    <fligh ID="CA741" departure="北京" destination="河内">
+    </flight>
+    <flight ID="CA741" departure="北京" destination="河内">
         <type>321</type>
         <takeOffExpected>01:25</takeOffExpected>
         <takeOffActual/>
         <arriveAtExpected>04:15</arriveAtExpected>
         <arriveAtActual/>
         <state>取消</state>
-    </fligh>
-    <fligh ID="CA949" departure="北京" destination="米兰">
+    </flight>
+    <flight ID="CA949" departure="北京" destination="米兰">
         <type>359</type>
         <takeOffExpected>01:30</takeOffExpected>
         <takeOffActual/>
         <arriveAtExpected>06:30</arriveAtExpected>
         <arriveAtActual/>
         <state>取消</state>
-    </fligh>
-    <fligh ID="CA961" departure="北京" destination="慕尼黑">
+    </flight>
+    <flight ID="CA961" departure="北京" destination="慕尼黑">
         <type>773</type>
         <takeOffExpected>02:00</takeOffExpected>
         <takeOffActual/>
         <arriveAtExpected>06:20</arriveAtExpected>
         <arriveAtActual/>
         <state>取消</state>
-    </fligh>
-    <fligh ID="CA875" departure="北京" destination="巴黎">
+    </flight>
+    <flight ID="CA875" departure="北京" destination="巴黎">
         <type>787</type>
         <takeOffExpected>05:30</takeOffExpected>
         <takeOffActual>05:36</takeOffActual>
         <arriveAtExpected>09:49</arriveAtExpected>
         <arriveAtActual/>
         <state>正常</state>
-    </fligh>
-    <fligh ID="CA1685" departure="北京" destination="牡丹江">
+    </flight>
+    <flight ID="CA1685" departure="北京" destination="牡丹江">
         <type>738</type>
         <takeOffExpected>06:15</takeOffExpected>
         <takeOffActual/>
         <arriveAtExpected>08:35</arriveAtExpected>
         <arriveAtActual/>
         <state>取消</state>
-    </fligh>
-    <fligh ID="CA1311" departure="北京" destination="南宁">
+    </flight>
+    <flight ID="CA1311" departure="北京" destination="南宁">
         <type>20N</type>
         <takeOffExpected>06:15</takeOffExpected>
         <takeOffActual/>
         <arriveAtExpected>09:50</arriveAtExpected>
         <arriveAtActual/>
         <state>取消</state>
-    </fligh>
-    <fligh ID="CA1659" departure="北京" destination="齐齐哈尔">
+    </flight>
+    <flight ID="CA1659" departure="北京" destination="齐齐哈尔">
         <type>738</type>
+        <!-- 把时间从String类型转换成时间类型 -->
         <takeOffExpected>06:15</takeOffExpected>
         <takeOffActual>06:23</takeOffActual>
         <arriveAtExpected>07:56</arriveAtExpected>
         <arriveAtActual>08:07</arriveAtActual>
         <state>正常</state>
-    </fligh>
+    </flight>
 </flights>

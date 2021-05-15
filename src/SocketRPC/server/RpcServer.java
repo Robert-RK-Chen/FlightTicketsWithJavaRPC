@@ -14,18 +14,12 @@ import java.util.HashMap;
 /**
  * @author Wang Huadong
  */
-public class RpcServer
+public record RpcServer(int port)
 {
 
     private static final HashMap<String, Class<?>> SERVICE_REGISTRY = new HashMap<>();
-    private int port;
 
-    public RpcServer(int port)
-    {
-        this.port = port;
-    }
-
-    public RpcServer register(Class serviceInterface, Class impl)
+    public RpcServer register(Class<?> serviceInterface, Class<?> impl)
     {
         SERVICE_REGISTRY.put(serviceInterface.getName(), impl);
         return this;
@@ -33,10 +27,9 @@ public class RpcServer
 
     public void run() throws IOException
     {
-
         ServerSocket server = new ServerSocket();
         server.bind(new InetSocketAddress(port));
-        System.out.println("start server");
+        System.out.println("start server......");
         ObjectInputStream input = null;
         ObjectOutputStream output = null;
         Socket socket = null;
@@ -50,15 +43,16 @@ public class RpcServer
                 String methodName = input.readUTF();
                 System.out.println(serviceName);
                 System.out.println(methodName);
+
                 Class<?>[] parameterTypes = (Class<?>[]) input.readObject();
                 Object[] arguments = (Object[]) input.readObject();
                 Class<?> serviceClass = SERVICE_REGISTRY.get(serviceName);
                 if (serviceClass == null)
                 {
-                    throw new ClassNotFoundException(serviceName + " not found");
+                    throw new ClassNotFoundException(serviceName + " not found.");
                 }
                 Method method = serviceClass.getMethod(methodName, parameterTypes);
-                Object result = method.invoke(serviceClass.newInstance(), arguments);
+                Object result = method.invoke(serviceClass.getDeclaredConstructor().newInstance(), arguments);
                 output = new ObjectOutputStream(socket.getOutputStream());
                 output.writeObject(result);
             }
@@ -107,7 +101,6 @@ public class RpcServer
 
     public static void main(String[] args) throws IOException
     {
-        new RpcServer(6666).register(FlightInfoReader.class, FlightInfoReaderImpl.class).run();
+        new RpcServer(9527).register(FlightInfoReader.class, FlightInfoReaderImpl.class).run();
     }
-
 }

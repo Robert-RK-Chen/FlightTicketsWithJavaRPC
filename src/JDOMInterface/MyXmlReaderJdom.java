@@ -20,7 +20,7 @@ public class MyXmlReaderJdom
             SAXBuilder builder = new SAXBuilder();
             Document doc = builder.build(new File("FlightInfo.xml"));
             Element foo = doc.getRootElement();
-            List allChildren;
+            List<?> allChildren;
             allChildren = foo.getChildren();
             for (Object allChild : allChildren)
             {

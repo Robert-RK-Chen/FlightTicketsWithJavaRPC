@@ -12,16 +12,15 @@ import org.dom4j.io.*;
  */
 public class MyXmlReaderDomFj
 {
-    public static void main(String[] args)
+    public static void readXmlFile(String fileName)
     {
-        long startTime = System.currentTimeMillis();
         try
         {
-            File flightInfoFile = new File("FlightInfo.xml");
+            File flightInfoFile = new File(fileName);
             SAXReader reader = new SAXReader();
             Document doc = reader.read(flightInfoFile);
             Element root = doc.getRootElement();
-            for (Iterator i = root.elementIterator(); i.hasNext(); )
+            for (Iterator<?> i = root.elementIterator(); i.hasNext(); )
             {
                 Element foo = (Element) i.next();
                 System.out.println("航班号：" + foo.attributeValue("ID"));
@@ -40,6 +39,11 @@ public class MyXmlReaderDomFj
         {
             e.printStackTrace();
         }
+    }
+    public static void main(String[] args)
+    {
+        long startTime = System.currentTimeMillis();
+        readXmlFile("FlightInfo.xml");
         System.out.println("运行时间：" + (System.currentTimeMillis() - startTime) + "毫秒");
     }
 }
