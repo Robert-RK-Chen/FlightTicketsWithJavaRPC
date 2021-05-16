@@ -31,6 +31,27 @@ public class XpathClient
         xpath = factory.newXPath();
     }
 
+    public static void getElement(NodeList nodelist)
+    {
+        Node node;
+        String str;
+        if (nodelist.getLength() == 0) { return; }
+        for (int i = 0; i < nodelist.getLength(); i++)
+        {
+            node = nodelist.item(i);
+            if (node.getNodeType() == Node.ELEMENT_NODE)
+            {
+                System.out.print(node.getNodeName() + ": ");
+                getElement(node.getChildNodes());
+            }
+            else if (node.getNodeType() == Node.TEXT_NODE)
+            {
+                str = node.getNodeValue().trim();
+                if (str.length() > 0) { System.out.println(str); }
+            }
+        }
+    }
+
     /**
      * 根据指定信息查询航班
      *
@@ -41,13 +62,7 @@ public class XpathClient
     {
         String xPathExpression = "//flight[@" + activity + " = '" + keyword + "']";
         NodeList nodeList = (NodeList) xpath.evaluate(xPathExpression, doc, XPathConstants.NODESET);
-        for (int i = 0; i < nodeList.getLength(); i++)
-        {
-            Node node = nodeList.item(i);
-            System.out.println("航班号：" + node.getAttributes().getNamedItem("ID").getTextContent());
-            System.out.println("出发地：" + node.getAttributes().getNamedItem("departure").getTextContent());
-            System.out.println("目的地：" + node.getAttributes().getNamedItem("destination").getTextContent());
-        }
+        getElement(nodeList);
     }
 
     public static void main(String[] args) throws Exception

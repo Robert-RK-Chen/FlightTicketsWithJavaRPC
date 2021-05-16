@@ -41,18 +41,18 @@ public class RpcClientProxy<T> implements InvocationHandler
 
         try
         {
-            // 1.åˆ›å»ºSocketå®¢æˆ·ç«¯ï¼Œæ ¹æ®æŒ‡å®šåœ°å€è¿æ¥è¿œç¨‹æœåŠ¡æä¾›è€…
+            // 1.´´½¨Socket¿Í»§¶Ë£¬¸ù¾İÖ¸¶¨µØÖ·Á¬½ÓÔ¶³Ì·şÎñÌá¹©Õß
             socket = new Socket();
             socket.connect(addr);
 
-            // 2.å°†è¿œç¨‹æœåŠ¡è°ƒç”¨æ‰€éœ€çš„æ¥å£ç±»ã€æ–¹æ³•åã€å‚æ•°åˆ—è¡¨ç­‰ç¼–ç åå‘é€ç»™æœåŠ¡æä¾›è€…
+            // 2.½«Ô¶³Ì·şÎñµ÷ÓÃËùĞèµÄ½Ó¿ÚÀà¡¢·½·¨Ãû¡¢²ÎÊıÁĞ±íµÈ±àÂëºó·¢ËÍ¸ø·şÎñÌá¹©Õß
             output = new ObjectOutputStream(socket.getOutputStream());
             output.writeUTF(serviceInterface.getName());
             output.writeUTF(method.getName());
             output.writeObject(method.getParameterTypes());
             output.writeObject(args);
 
-            // 3.åŒæ­¥é˜»å¡ç­‰å¾…æœåŠ¡å™¨è¿”å›åº”ç­”ï¼Œè·å–åº”ç­”åè¿”å›
+            // 3.Í¬²½×èÈûµÈ´ı·şÎñÆ÷·µ»ØÓ¦´ğ£¬»ñÈ¡Ó¦´ğºó·µ»Ø
             input = new ObjectInputStream(socket.getInputStream());
             return input.readObject();
         }
@@ -80,15 +80,15 @@ public class RpcClientProxy<T> implements InvocationHandler
         List<Element> flights = reader.getFlightInfo();
         for (Element foo : flights)
         {
-            System.out.println("èˆªç­å·ï¼š" + foo.attributeValue("ID"));
-            System.out.println("å‡ºå‘åœ°ï¼š" + foo.attributeValue("departure"));
-            System.out.println("ç›®çš„åœ°ï¼š" + foo.attributeValue("destination"));
-            System.out.println("å‹å·ï¼š" + foo.elementText("type"));
-            System.out.println("é¢„è®¡å‡ºå‘æ—¶é—´ï¼š" + foo.elementText("takeOffExpected"));
-            System.out.println("å®é™…å‡ºå‘æ—¶é—´ï¼š" + foo.elementText("takeOffActual"));
-            System.out.println("é¢„è®¡åˆ°è¾¾æ—¶é—´ï¼š" + foo.elementText("arriveAtExpected"));
-            System.out.println("å®é™…åˆ°è¾¾æ—¶é—´ï¼š" + foo.elementText("arriveAtActual"));
-            System.out.println("èˆªç­çŠ¶æ€ï¼š" + foo.elementText("state"));
+            System.out.println("º½°àºÅ£º" + foo.attributeValue("ID"));
+            System.out.println("³ö·¢µØ£º" + foo.attributeValue("departure"));
+            System.out.println("Ä¿µÄµØ£º" + foo.attributeValue("destination"));
+            System.out.println("ĞÍºÅ£º" + foo.elementText("type"));
+            System.out.println("Ô¤¼Æ³ö·¢Ê±¼ä£º" + foo.elementText("takeOffExpected"));
+            System.out.println("Êµ¼Ê³ö·¢Ê±¼ä£º" + foo.elementText("takeOffActual"));
+            System.out.println("Ô¤¼Æµ½´ïÊ±¼ä£º" + foo.elementText("arriveAtExpected"));
+            System.out.println("Êµ¼Êµ½´ïÊ±¼ä£º" + foo.elementText("arriveAtActual"));
+            System.out.println("º½°à×´Ì¬£º" + foo.elementText("state"));
             System.out.println("---------------------------------------------------------------------");
         }
     }
