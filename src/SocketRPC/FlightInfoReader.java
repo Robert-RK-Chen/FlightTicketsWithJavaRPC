@@ -2,6 +2,7 @@ package SocketRPC;
 
 import org.dom4j.Element;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**

@@ -1,68 +1,68 @@
-<?xml version="1.0" encoding="gb2312"?>
+<?xml version="1.0" encoding="utf-8"?>
 <flights>
-    <flight ID="CA907" departure="±±æ©" destination="¬Ìµ¬¿Ô">
+    <flight ID="CA907" departure="Âåó‰∫¨" destination="È©¨Âæ∑Èáå">
         <type>787</type>
         <takeOffExpected>00:55</takeOffExpected>
         <takeOffActual/>
         <arriveAtExpected>06:45</arriveAtExpected>
         <arriveAtActual/>
-        <state>»°œ˚</state>
+        <state>ÂèñÊ∂à</state>
     </flight>
-    <flight ID="CA741" departure="±±æ©" destination="∫”ƒ⁄">
+    <flight ID="CA741" departure="Âåó‰∫¨" destination="Ê≤≥ÂÜÖ">
         <type>321</type>
         <takeOffExpected>01:25</takeOffExpected>
         <takeOffActual/>
         <arriveAtExpected>04:15</arriveAtExpected>
         <arriveAtActual/>
-        <state>»°œ˚</state>
+        <state>ÂèñÊ∂à</state>
     </flight>
-    <flight ID="CA949" departure="±±æ©" destination="√◊¿º">
+    <flight ID="CA949" departure="Âåó‰∫¨" destination="Á±≥ÂÖ∞">
         <type>359</type>
         <takeOffExpected>01:30</takeOffExpected>
         <takeOffActual/>
         <arriveAtExpected>06:30</arriveAtExpected>
         <arriveAtActual/>
-        <state>»°œ˚</state>
+        <state>ÂèñÊ∂à</state>
     </flight>
-    <flight ID="CA961" departure="±±æ©" destination="ƒΩƒ·∫⁄">
+    <flight ID="CA961" departure="Âåó‰∫¨" destination="ÊÖïÂ∞ºÈªë">
         <type>773</type>
         <takeOffExpected>02:00</takeOffExpected>
         <takeOffActual/>
         <arriveAtExpected>06:20</arriveAtExpected>
         <arriveAtActual/>
-        <state>»°œ˚</state>
+        <state>ÂèñÊ∂à</state>
     </flight>
-    <flight ID="CA875" departure="±±æ©" destination="∞Õ¿Ë">
+    <flight ID="CA875" departure="Âåó‰∫¨" destination="Â∑¥Èªé">
         <type>787</type>
         <takeOffExpected>05:30</takeOffExpected>
         <takeOffActual>05:36</takeOffActual>
         <arriveAtExpected>09:49</arriveAtExpected>
         <arriveAtActual/>
-        <state>’˝≥£</state>
+        <state>Ê≠£Â∏∏</state>
     </flight>
-    <flight ID="CA1685" departure="±±æ©" destination="ƒµµ§Ω≠">
+    <flight ID="CA1685" departure="Âåó‰∫¨" destination="Áâ°‰∏πÊ±ü">
         <type>738</type>
         <takeOffExpected>06:15</takeOffExpected>
         <takeOffActual/>
         <arriveAtExpected>08:35</arriveAtExpected>
         <arriveAtActual/>
-        <state>»°œ˚</state>
+        <state>ÂèñÊ∂à</state>
     </flight>
-    <flight ID="CA1311" departure="±±æ©" destination="ƒœƒ˛">
+    <flight ID="CA1311" departure="Âåó‰∫¨" destination="ÂçóÂÆÅ">
         <type>20N</type>
         <takeOffExpected>06:15</takeOffExpected>
         <takeOffActual/>
         <arriveAtExpected>09:50</arriveAtExpected>
         <arriveAtActual/>
-        <state>»°œ˚</state>
+        <state>ÂèñÊ∂à</state>
     </flight>
-    <flight ID="CA1659" departure="±±æ©" destination="∆Î∆Îπ˛∂˚">
+    <flight ID="CA1659" departure="Âåó‰∫¨" destination="ÈΩêÈΩêÂìàÂ∞î">
         <type>738</type>
-        <!-- ∞— ±º‰¥”String¿‡–Õ◊™ªª≥… ±º‰¿‡–Õ -->
+        <!-- ÊääÊó∂Èó¥‰ªéStringÁ±ªÂûãËΩ¨Êç¢ÊàêÊó∂Èó¥Á±ªÂûã -->
         <takeOffExpected>06:15</takeOffExpected>
         <takeOffActual>06:23</takeOffActual>
         <arriveAtExpected>07:56</arriveAtExpected>
         <arriveAtActual>08:07</arriveAtActual>
-        <state>’˝≥£</state>
+        <state>Ê≠£Â∏∏</state>
     </flight>
 </flights>
